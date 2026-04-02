@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Smart To-Do List | jQuery powered</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="todo-app">
+        <div class="header">
+            <h1>
+                <i class="fas fa-check-double"></i> 
+                TaskFlow
+            </h1>
+            <div class="sub">
+                <span>📋 organize your day</span>
+                <div class="stats" id="taskStats">
+                    <span><i class="far fa-clock"></i> <span id="totalCount">0</span> total</span>
+                    <span><i class="fas fa-check-circle"></i> <span id="completedCount">0</span> done</span>
+                    <span><i class="fas fa-hourglass-half"></i> <span id="pendingCount">0</span> pending</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="input-section">
+            <div class="input-group">
+                <input type="text" id="taskInput" class="task-input" placeholder="What do you need to do? e.g., 'Finish report 📄'" autocomplete="off">
+                <button id="addTaskBtn" class="add-btn"><i class="fas fa-plus-circle"></i> Add task</button>
+            </div>
+        </div>
+
+        <div class="filter-tabs">
+            <button class="filter-btn active" data-filter="all"><i class="fas fa-list-ul"></i> All</button>
+            <button class="filter-btn" data-filter="pending"><i class="fas fa-spinner"></i> Pending</button>
+            <button class="filter-btn" data-filter="completed"><i class="fas fa-check-circle"></i> Completed</button>
+        </div>
+
+        <div class="task-list-container">
+            <ul id="todoList" class="todo-list">
+                <li class="empty-message">
+                    <i class="fas fa-clipboard-list"></i><br>
+                    Your to-do list is empty ✨<br> Add your first task!
+                </li>
+            </ul>
+        </div>
+        <div class="footer-note">
+            <i class="fas fa-pen-alt"></i> Click on task text to edit • check to mark done
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+</html>
